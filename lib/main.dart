@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
 //https://youtu.be/YUkSk_prEtI?list=PLutrh4gv1YI8ap4JO23lN81JOSZJ3i5OO
 
@@ -37,6 +38,7 @@ class _MyHubappageState extends State<MyHubappage> {
 
   @override
   Widget build(BuildContext context) {
+    initializeDateFormatting('Es');
     return Scaffold(
       backgroundColor: Colors.grey[300],
       body: SafeArea(
@@ -81,14 +83,14 @@ class _MyHubappageState extends State<MyHubappage> {
                         Column(
                           children:  [
                              Text(
-                              DateFormat.EEEE().format(today),
+                              DateFormat.EEEE('es_ES').format(today),
                               style: const TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             Text(
-                              DateFormat.EEEE().format(today),
+                              DateFormat.EEEE('Es').format(today),
                               style: const TextStyle(
                                 fontSize: 12,
                                 color: Colors.grey
@@ -602,7 +604,7 @@ class _MyHubappageState extends State<MyHubappage> {
         ),
         child: const Center(
           child: Text(
-            "612 lLíneas despues...",
+            "616 Líneas despues...",
             style: TextStyle(
               fontSize: 12,
             ),
