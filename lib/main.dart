@@ -604,7 +604,7 @@ class _MyHubappageState extends State<MyHubappage> {
         ),
         child: const Center(
           child: Text(
-            "616 Líneas despues...",
+            "667 Líneas despues...",
             style: TextStyle(
               fontSize: 12,
             ),
