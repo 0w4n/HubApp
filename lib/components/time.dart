@@ -9,8 +9,4 @@ class ChangeTime {
   void initState() {
     today = DateTime.now();
   }
-  
-  if (today = '00:00:00') {
-    
-  }
 }
