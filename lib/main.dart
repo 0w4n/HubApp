@@ -2,7 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
+import 'components/time.dart';
 //https://youtu.be/YUkSk_prEtI?list=PLutrh4gv1YI8ap4JO23lN81JOSZJ3i5OO
+
+
+extension StringExtension on String {
+  String capitalize() {
+    return "${this[0].toUpperCase()}${substring(1).toLowerCase()}";
+  }
+}
 
 void main() =>  runApp(const MyApp());
 
@@ -19,7 +27,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHubappage extends StatefulWidget {
-  const MyHubappage({ Key? key }) : super(key: key);
+  const MyHubappage({ Key? key } ) : super(key: key);
 
   @override
   _MyHubappageState createState() => _MyHubappageState();
@@ -27,14 +35,7 @@ class MyHubappage extends StatefulWidget {
 
 class _MyHubappageState extends State<MyHubappage> {
 
-  late DateTime today;
-
-  @override
-  void initState() {
-    super.initState();
-    today = DateTime.now();
-  }
-
+  late DateTime today = Time() as DateTime;
 
   @override
   Widget build(BuildContext context) {
@@ -83,14 +84,14 @@ class _MyHubappageState extends State<MyHubappage> {
                         Column(
                           children:  [
                              Text(
-                              DateFormat.EEEE('es_ES').format(today),
+                              DateFormat.EEEE().format(today).capitalize(),
                               style: const TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             Text(
-                              DateFormat.EEEE('Es').format(today),
+                              DateFormat.EEEE().format(today),
                               style: const TextStyle(
                                 fontSize: 12,
                                 color: Colors.grey
