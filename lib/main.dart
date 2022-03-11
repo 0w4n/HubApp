@@ -40,7 +40,7 @@ class MyHubappage extends StatefulWidget {
 
 class _MyHubappageState extends State<MyHubappage> {
 
-  var todayd = Tiempo();
+  DateTime today = Tiempo();
 
   @override
   Widget build(BuildContext context) {
