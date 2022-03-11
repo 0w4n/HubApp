@@ -1,7 +1,3 @@
-class Time {
-  late DateTime today;
-
-  void initState() {
-    today = DateTime.now();
-  }
+class Tiempo {
+   late DateTime today = DateTime.now();
 }
