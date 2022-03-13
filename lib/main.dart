@@ -40,7 +40,7 @@ class MyHubappage extends StatefulWidget {
 
 class _MyHubappageState extends State<MyHubappage> {
 
-  DateTime today = Tiempo();
+  DateTime today = Tiempo().today;
 
   @override
   Widget build(BuildContext context) {
@@ -95,7 +95,7 @@ class _MyHubappageState extends State<MyHubappage> {
                               ),
                             ),
                             Text(
-                              DateFormat.EEEE('es_ES').format(today),
+                              DateFormat.EEEE('es_ES').format(today).capitalize(),
                               style: const TextStyle(
                                 fontSize: 12,
                                 color: Colors.grey
@@ -609,13 +609,14 @@ class _MyHubappageState extends State<MyHubappage> {
         ),
         child: const Center(
           child: Text(
-            "667 Líneas despues...",
+            "689 Líneas despues...",
             style: TextStyle(
               fontSize: 12,
             ),
           ),
         ),
       ),
+      //file:///C:/Users/JORGE/AppData/Local/Temp/7zO8CBE761E/setting-2.svg
     );
   }
 }
