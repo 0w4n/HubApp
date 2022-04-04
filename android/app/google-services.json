@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "432798172069",
+    "project_id": "hubapp-cft65",
+    "storage_bucket": "hubapp-cft65.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432798172069:android:80053993441f6015e85e4c",
+        "android_client_info": {
+          "package_name": "com.owen.HubApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "432798172069-osdib6j9ht3hgev78hv30a4kbeo8ufm2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjqwfzSfw46rx62cTOYxdIx0_O8MUViiI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "432798172069-osdib6j9ht3hgev78hv30a4kbeo8ufm2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
