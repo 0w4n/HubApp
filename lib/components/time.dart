@@ -1,37 +1,37 @@
-import 'package:flutter/cupertino.dart';
+
 
 class Tiempo {
    late DateTime today = DateTime.now();
 }
 
-class Buenas3 {
+String Buenas3(Tiempo()) {
   final bd = 08;
   final bt = 14;
   final bn = 19;
   final time = Tiempo();
   final ahora = Tiempo().today.hour;
+  //Buendos días / desde
+  int bdd = 6;
+  //Buendos días / hasta
+  int bdh = 12;
 
-  Text validacion(today, bd, bt, bn, ahora, time) {
-   if (ahora >= bd && ahora < bt) {
-      return const Text('Buenos días',
-                        style: TextStyle(
-                            fontSize: 12)
-                        );
-    } else if (ahora >= bt && ahora < bn) {
-      return const Text('Buenas tardes',
-                        style: TextStyle(
-                          fontSize: 12)
-                        );
-    } else if (ahora >= bn && ahora < bd) {
-      return const Text('Buenas noches',
-                        style: TextStyle(
-                          fontSize: 12)
-                        );
-    } else {
-      return const Text('Estamos de madrugada',
-                        style: TextStyle(
-                          fontSize: 12)
-                        );
-    }
+  //Buenas tardes / desde
+  int btd = 12;
+  //Buenas tardes / hasta
+  int bth = 19;
+
+  //Buenas noches / desde
+  int bnd = 19;
+  //Buenas noches / hasta
+  int bnh = 00;
+
+  if (ahora >= bdd && ahora < bdh) {
+    return "Buenos días";
+  } else if (ahora >= btd && ahora < bth) {
+    return "Buenas tardes";
+  } else if (ahora >= bnd && ahora < bnh) {
+    return "Buenas noches";
+  } else {
+    return "Estamos de madrugada";
   }
 }
