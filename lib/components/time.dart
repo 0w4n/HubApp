@@ -11,19 +11,27 @@ class Buenas3 {
   final time = Tiempo();
   final ahora = Tiempo().today.hour;
 
-  void validacion(today, bd, bt, bn, ahora, time) {
+  Text validacion(today, bd, bt, bn, ahora, time) {
    if (ahora >= bd && ahora < bt) {
-      returnText('Buenos días');
+      return const Text('Buenos días',
+                        style: TextStyle(
+                            fontSize: 12)
+                        );
     } else if (ahora >= bt && ahora < bn) {
-      returnText('Buenas tardes');
+      return const Text('Buenas tardes',
+                        style: TextStyle(
+                          fontSize: 12)
+                        );
     } else if (ahora >= bn && ahora < bd) {
-      returnText('Buenas noches');
+      return const Text('Buenas noches',
+                        style: TextStyle(
+                          fontSize: 12)
+                        );
     } else {
-      returnText('Estamos de madrugada');
+      return const Text('Estamos de madrugada',
+                        style: TextStyle(
+                          fontSize: 12)
+                        );
     }
-  }
-
-  void returnText(String titulo) async {
-    return const Text($titulo);
   }
 }

@@ -41,6 +41,8 @@ class MyHubappage extends StatefulWidget {
 class _MyHubappageState extends State<MyHubappage> {
 
   DateTime today = Tiempo().today;
+  
+  Text cdt = Buenas3() as Text;
 
   @override
   Widget build(BuildContext context) {
@@ -285,11 +287,7 @@ class _MyHubappageState extends State<MyHubappage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         const Text(
-                          "Buenos días,",
-                          style: TextStyle(
-                            fontSize: 12,
-                          ),
-                        ),
+                          $cdt.validation),
                         const Text(
                           "Hay música puesta",
                           style: TextStyle(
@@ -532,7 +530,7 @@ class _MyHubappageState extends State<MyHubappage> {
                       ],
                     ),
                   ),
-                                    const SizedBox(
+                  const SizedBox(
                     width: 16
                   ),
                   Container(
